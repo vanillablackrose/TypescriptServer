@@ -1,0 +1,25 @@
+{
+  "name": "typescriptserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc && npm run copy-static",
+    "start": "node dist/index.js",
+    "dev": "npx tsc && node dist/index.js",
+    "copy-static": "mkdir -p dist/app && cp -R src/app/* dist/app/",
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.7.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
