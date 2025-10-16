@@ -9,17 +9,27 @@
     "start": "node dist/index.js",
     "dev": "npx tsc && node dist/index.js",
     "copy-static": "mkdir -p dist/app && cp -R src/app/* dist/app/",
-    "test": ""
+    "generate": "npx drizzle-kit generate --config=drizzle.config.ts",
+    "migrate": "npx drizzle-kit migrate --config=drizzle.config.ts",
+    "push": "npx drizzle-kit push --config=drizzle.config.ts",
+    "test": "vitest --run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.7.0",
-    "typescript": "^5.9.3"
+    "drizzle-kit": "^0.31.5",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "argon2": "^0.44.0",
+    "drizzle-orm": "^0.44.6",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "postgres": "^3.4.7"
   }
 }

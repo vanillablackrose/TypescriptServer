@@ -1,4 +1,4 @@
-import { apiConfig } from '../config.js';
+import { config } from '../config.js';
 export async function middlewareLogResponses(req, res, next) {
     res.on('finish', () => {
         let statusCode = res.statusCode;
@@ -10,6 +10,6 @@ export async function middlewareLogResponses(req, res, next) {
     next();
 }
 export async function middlewareMetricsInc(req, res, next) {
-    apiConfig.fileserverHits++;
+    config.fileserverHits++;
     next();
 }

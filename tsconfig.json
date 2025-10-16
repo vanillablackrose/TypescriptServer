@@ -8,7 +8,8 @@
     "strict": true,
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "lib": ["ES2021.String"]
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules"]
